@@ -7,6 +7,7 @@ public class Graph {
 
 	public Graph(int[][] adjMatrix) {
 		this.adjMatrix = adjMatrix;
+		this.vertices = new HashMap<Integer, Boolean>();
 		for (int i = 0; i < this.adjMatrix.length; i++)
 			this.vertices.put(i, false);
 	}
