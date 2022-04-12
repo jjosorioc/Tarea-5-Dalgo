@@ -11,26 +11,25 @@ public class Reader {
 	}
 
 	public static int[][] readMatrix() {
-		int[][] matrix = new int[0][0];
-		boolean checked = false;
-		int i = 0;
-		String line = sc.nextLine();
-		while (!line.isBlank()) {
-			String[] row = line.split("\t");
-			if (!checked) {
-				matrix = new int[row.length][row.length];
-				checked = true;
+		// Primera línea
+		String[] currentLine = sc.nextLine().split("\t");
+
+		int[][] grafo = new int[currentLine.length][currentLine.length];
+
+		// Se crea el grafo
+		for (int fila = 0; fila < currentLine.length; fila++) {
+			for (int columna = 0; columna < currentLine.length; columna++) {
+				grafo[fila][columna] = Integer.parseInt(currentLine[columna]);
 			}
 
-			for (int j = 0; j < row.length; j++) {
-				int num = Integer.parseInt(row[j]);
-				matrix[i][j] = num == -1 ? Integer.MAX_VALUE : num;
-			}
-
-			i++;
-			line = sc.hasNextLine() ? sc.nextLine() : "";
+			currentLine = sc.hasNextLine() ? sc.nextLine().split("\t") : "".split("\t");
 		}
 
-		return matrix;
+		return grafo;
+	}
+
+	public static void printDistances(int[][] distancesToInits) {
+		for (int i = 0; i < distancesToInits.length; i++)
+			System.out.println(i + ". " + Arrays.toString(distancesToInits[i]));
 	}
 }

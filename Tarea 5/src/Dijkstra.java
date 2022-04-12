@@ -1,5 +1,3 @@
-
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Dijkstra {
@@ -12,26 +10,20 @@ public class Dijkstra {
 	 */
 	public static void main(String[] args) {
 
-		// Primera línea
-		String[] currentLine = sc.nextLine().split("\t");
-
-		int[][] grafo = new int[currentLine.length][currentLine.length];
-
-		// Se crea el grafo
-		for (int fila = 0; fila < currentLine.length; fila++) {
-			for (int columna = 0; columna < currentLine.length; columna++) {
-				grafo[fila][columna] = Integer.parseInt(currentLine[columna]);
-			}
-
-			try {
-				currentLine = sc.nextLine().split("\t");
-			} catch (NoSuchElementException e) {
-				break;
-			}
-		}
+		int[][] graph = Reader.readMatrix();
+		Reader.printDistances(calculateDijkstraFromAllVertices(graph));
 	}
 
-	public static void DijkstraAlgorithm(int[][] graph, int initVertex) {
+	public static int[][] calculateDijkstraFromAllVertices(int[][] graph) {
+		int[][] distancesToInits = new int[graph.length][graph.length];
+		for (int i = 0; i < graph.length; i++) {
+			distancesToInits[i] = DijkstraAlgorithm(graph, i);
+		}
+
+		return distancesToInits;
+	}
+
+	private static int[] DijkstraAlgorithm(int[][] graph, int initVertex) {
 		int[] distancesToInit = new int[graph.length];
 		boolean[] marked = new boolean[graph.length];
 
@@ -53,6 +45,8 @@ public class Dijkstra {
 					distancesToInit[j] = distancesToInit[closestVertex] + graph[closestVertex][j];
 			}
 		}
+
+		return distancesToInit;
 	}
 
 	private static int findClosestVertex(int[] distancesToInit, boolean[] marked) {
