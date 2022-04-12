@@ -59,6 +59,7 @@ public class Dijkstra {
 		int minDistanceFound = Integer.MAX_VALUE;
 		int index = -1;
 
+		// Iterates over all found distances to get the smallest distance
 		for (int i = 0; i < distancesToInit.length; i++) {
 			if (!marked[i] && distancesToInit[i] <= minDistanceFound) {
 				minDistanceFound = distancesToInit[i];
