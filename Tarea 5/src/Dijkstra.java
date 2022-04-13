@@ -1,15 +1,6 @@
-import java.util.Scanner;
-
 public class Dijkstra {
-	private static Scanner sc = new Scanner(System.in);
 
-	/**
-	 * Main
-	 *
-	 * @param args
-	 */
 	public static void main(String[] args) {
-
 		int[][] graph = Reader.readMatrix();
 		Reader.printDistances(calculateDijkstraFromAllVertices(graph));
 	}
