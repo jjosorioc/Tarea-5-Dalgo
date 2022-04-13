@@ -5,7 +5,7 @@ public class BellmanFord {
 		Reader.printDistances(calculateBellmanFordFromAllVerices(graph));
 	}
 
-	private static int[][] calculateBellmanFordFromAllVerices(int[][] graph) {
+	public static int[][] calculateBellmanFordFromAllVerices(int[][] graph) {
 		int[][] distancesToInits = new int[graph.length][graph.length];
 		for (int i = 0; i < graph.length; i++) {
 			distancesToInits[i] = BellmanFordAlgorithm(graph, i);
