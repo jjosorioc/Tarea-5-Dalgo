@@ -20,3 +20,5 @@
 	que representa la columna. El numero de filas y columnas empiezan en 0, lo
 	cual significa que tanto la primera fila como la primera columna hacen
 	referencia a l vertice "0".
+
+	El numero "2147483647" hace referencia a infinito.
