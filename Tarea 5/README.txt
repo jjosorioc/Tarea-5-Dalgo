@@ -1,4 +1,4 @@
-1.
+PARTE 1:
 	Para ejecutar los programas en el punto 1 se debe primero compilar el archivo
 	"Reader.java" ya que este es el archivo que se encarga de recibir las entradas
 	y mostrar las salidas. Seguido de esto, compile los archivos:
@@ -22,3 +22,36 @@
 	referencia a l vertice "0".
 
 	El numero "2147483647" hace referencia a infinito.
+
+
+PARTE 2:
+	Para ejecutar el programa de la parte 2 se debe compilar el archivo llamado "BFS.java" con
+	el comando "javac BFS.java". Para esto, debe estar en el directorio donde se encuentra el
+	archivo.
+
+	Después de compilarlo, ejecute el programa con el siguiente comando en su terminal: "java BFS < bfs.txt",
+	sin las comillas.
+	Al ejecutarlo, se imprimirá el resultado en su terminal. Si prefiere que el resultado se 
+	guarde en un archivo de texto, ejecute el siguiente comando: "java BFS < bfs.txt > out.txt", 
+	sin las comillas.
+
+	El resultado de la prueba debería ser "[[0, 2, 3], [1, 5], [4, 6]]", donde cada [] es una 
+	partición de los vértices donde cada par de elementos del subconjunto de la partición existe un 
+	camino en el grafo.
+
+	Cabe resaltar que, como ejemplo, se utilizo el archivo bfs.txt; sin embargo, puede ingresar el 
+	archivo de texto que desee.
+
+
+PARTE 3:
+	Para ejecutar el programa de la parte 3 se debe compilar el archivo llamado "DFS.java" con
+	el comando "javac DFS.java". Para esto, debe estar en el directorio donde se encuentra el
+	archivo
+
+	Después de compilarlo, ejecute el programa con el siguiente comando en su terminal: "java DFS < _____.txt",
+	sin las comillas, reemplazando en el "_____" el nombre del archivo con la matriz de adjacencia 
+	que quiera ingresar.
+
+	Para que el resultado se guarde en un archivo de texto ejecute el siguiente comando:
+	"java DFS < _____.txt > ####.txt", donde "####" es el nombre del archivo en el que desea 
+	que se guarde el resultado.
