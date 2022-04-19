@@ -55,3 +55,14 @@ PARTE 3:
 	Para que el resultado se guarde en un archivo de texto ejecute el siguiente comando:
 	"java DFS < _____.txt > ####.txt", donde "####" es el nombre del archivo en el que desea 
 	que se guarde el resultado.
+	
+	
+PARTE 4:
+	Para ejecutar el problems de la parte 4 se debe compilar el archivo llamado "Kruskal.txt", esto se puede realizar
+	por una consola ejecutando el comando "java Kruskal.java < mapaCiudad.txt", sin las comillas.
+	
+	El problema recibe un archivo de texto con las esquinas de las calles (como enteros) y los costos de convertir las
+	calles a dobles vías. Este archivo se llama mapaCiudad.txt y puede ser modificado para probar el funcionamiento
+	del algoritmo.
+	
+	Se retorna la información de las esquinas y los costos que se deben convertir para solucionar el problema
