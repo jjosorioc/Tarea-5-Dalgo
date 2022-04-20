@@ -61,11 +61,12 @@ public class DFS {
 					visited[v] = true;
 				}
 
-				// TODO: Revisar ciclos
-//				 else {
-//					answer.add(v);
-//					return answer;
-//				}
+				// Se encuentra un ciclo
+				else {
+					System.out.println("HAY UN CICLO\nNodo repetido: " + v);
+					answer.add(v);
+					return answer;
+				}
 			}
 		}
 		return answer;
